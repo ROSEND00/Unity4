@@ -21,13 +21,20 @@ public class GameManager : MonoBehaviour
         else if (singleton! == this) {
         Destroy(gameObject);
         }
+
+        bestscore = PlayerPrefs.GetInt("HighScore");
     }
    public void NextLevel()
     {
-
+        Debug.Log("pasamos de nivel");
     }
 
-    public void RestartLevel() { }
+    public void RestartLevel() {
+
+        Debug.Log("Restart");
+        singleton.currentScore = 0;
+        FindAnyObjectByType<BallController>().ResetBall();
+    }
 
     public void AddScore(int scoreToAdd)
     {
@@ -36,6 +43,7 @@ public class GameManager : MonoBehaviour
         if (currentScore > bestscore) { 
         
         bestscore = currentScore;}
+        PlayerPrefs.SetInt("HighScore", currentScore);
     }
 
 
