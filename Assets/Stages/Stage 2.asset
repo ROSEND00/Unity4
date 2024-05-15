@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dbca9744be0af943a60cfa6f5ff4edb, type: 3}
-  m_Name: Stage 0
+  m_Name: Stage 2
   m_EditorClassIdentifier: 
-  stageBackgroundColor: {r: 0.46751517, g: 0.9622642, b: 0.83492863, a: 0.64705884}
-  stageLevelPartColor: {r: 0.90588236, g: 0.77888006, b: 0.40392163, a: 1}
-  stageBallColor: {r: 0.59296167, g: 0.48989856, b: 0.9528302, a: 1}
+  stageBackgroundColor: {r: 0.13163051, g: 0.87827843, b: 0.9622642, a: 0.64705884}
+  stageLevelPartColor: {r: 0.990566, g: 0.58435047, b: 0.3317462, a: 1}
+  stageBallColor: {r: 0.05900679, g: 0.9622642, b: 0.29409555, a: 1}
   levels:
   - partCount: 7
     deathPartCount: 4

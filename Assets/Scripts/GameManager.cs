@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -26,7 +26,11 @@ public class GameManager : MonoBehaviour
     }
    public void NextLevel()
     {
-        Debug.Log("pasamos de nivel");
+        currentLevel++;
+        FindObjectOfType<BallController>().ResetBall();
+        FindObjectOfType<HelixController>().LoadStage(currentLevel);
+
+
     }
 
     public void RestartLevel() {
@@ -34,6 +38,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("Restart");
         singleton.currentScore = 0;
         FindAnyObjectByType<BallController>().ResetBall();
+        FindObjectOfType<HelixController>().LoadStage(currentLevel);
+
     }
 
     public void AddScore(int scoreToAdd)
